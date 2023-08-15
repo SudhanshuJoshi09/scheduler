@@ -1,8 +1,7 @@
-FROM maven:3.8.3-openjdk-17
+FROM openjdk:17-jdk-slim AS build
 
-COPY . /app
 WORKDIR /app
 
-RUN mvn package
+COPY build/libs/scheduler-0.0.1-SNAPSHOT.jar app.jar
 
-ENTRYPOINT [ "mvn", "springboot:run" ]
+CMD ["java", "-jar", "app.jar"]

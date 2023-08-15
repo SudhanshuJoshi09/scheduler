@@ -24,3 +24,8 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
+### Running Project
+* ./gradlew build (Create Jar file)
+* docker build -t scheduler-app . (Create Image named schedular-app)
+* docker run -p 8080:8080 scheduler-app (run)
+
